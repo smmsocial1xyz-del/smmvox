@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر الخدمات الرقمية والشحن</title>
+    <title>متجر فوكس - للخدمات الرقمية والشحن</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,12 +19,12 @@
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3 space-x-reverse">
                 <div class="bg-blue-600 p-2 rounded-xl text-white shadow-md shadow-blue-500/30">
-                    <i class="fa-solid fa-gamepad text-xl"></i>
+                    <i class="fa-solid fa-fox text-xl"></i>
                 </div>
-                <h1 class="text-xl font-bold tracking-wider text-white">متجر <span class="text-blue-500">الخدمات والشحن</span></h1>
+                <h1 class="text-xl font-bold tracking-wider text-white">متجر <span class="text-blue-500">فوكس</span></h1>
             </div>
             <div class="flex items-center space-x-3 space-x-reverse">
-                <a href="https://wa.me/201234567890" target="_blank" class="bg-green-600/20 border border-green-500/40 text-green-400 px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-green-600 hover:text-white transition">
+                <a href="https://wa.me/201093285651" target="_blank" class="bg-green-600/20 border border-green-500/40 text-green-400 px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-green-600 hover:text-white transition">
                     <i class="fa-brands fa-whatsapp"></i> واتساب
                 </a>
                 <a href="https://t.me/yourusername" target="_blank" class="bg-sky-600/20 border border-sky-500/40 text-sky-400 px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-sky-600 hover:text-white transition">
@@ -108,13 +108,13 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800 py-6 text-center text-sm text-gray-500">
-        <p>جميع الحقوق محفوظة &copy; 2026 - لوحة الخدمات الرقمية</p>
+        <p>جميع الحقوق محفوظة &copy; 2026 - متجر فوكس</p>
     </footer>
 
     <!-- JavaScript Logic -->
     <script>
         let servicesData = [];
-        let whatsappNumber = "201234567890"; // ضع رقم الواتساب الخاص بك هنا (بدون علامة +)
+        let whatsappNumber = "201093285651"; // رقم الواتساب الخاص بمتجر فوكس
 
         async function fetchServices() {
             try {
@@ -247,7 +247,7 @@
             const service = servicesData.find(s => s.id == serviceId);
             const total = service.price * quantity;
 
-            let message = `مرحباً، أريد طلب الخدمة التالية:%0A` +
+            let message = `مرحباً، أريد طلب الخدمة التالية من متجر فوكس:%0A` +
                           `----------------------------------%0A` +
                           `📌 الخدمة: ${service.name}%0A` +
                           `📝 المدخلات (ID / البيانات): ${userInput}%0A` +

@@ -2,72 +2,72 @@
   {
     "id": 1,
     "name": "شحن شدات ببجي - 60 UC",
-    "category": "games",
+    "category": "pubg",
     "price": 0,
     "unit": "شدة",
     "inputType": "id",
     "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 60 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+    "description": "شحن 60 شدة ببجي موبايل رسمياً وآمناً."
   },
   {
     "id": 2,
     "name": "شحن شدات ببجي - 120 UC",
-    "category": "games",
+    "category": "pubg",
     "price": 0,
     "unit": "شدة",
     "inputType": "id",
     "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 120 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+    "description": "شحن 120 شدة ببجي موبايل رسمياً وآمناً."
   },
   {
     "id": 3,
     "name": "شحن شدات ببجي - 325 UC",
-    "category": "games",
+    "category": "pubg",
     "price": 0,
     "unit": "شدة",
     "inputType": "id",
     "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 325 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+    "description": "شحن 325 شدة ببجي موبايل رسمياً وآمناً."
   },
   {
     "id": 4,
     "name": "شحن شدات ببجي - 660 UC",
-    "category": "games",
+    "category": "pubg",
     "price": 0,
     "unit": "شدة",
     "inputType": "id",
     "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 660 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+    "description": "شحن 660 شدة ببجي موبايل رسمياً وآمناً."
   },
   {
     "id": 5,
     "name": "شحن شدات ببجي - 1800 UC",
-    "category": "games",
+    "category": "pubg",
     "price": 0,
     "unit": "شدة",
     "inputType": "id",
     "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 1800 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+    "description": "شحن 1800 شدة ببجي موبايل رسمياً وآمناً."
   },
   {
     "id": 6,
     "name": "شحن شدات ببجي - 3850 UC",
-    "category": "games",
+    "category": "pubg",
     "price": 0,
     "unit": "شدة",
     "inputType": "id",
     "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 3850 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+    "description": "شحن 3850 شدة ببجي موبايل رسمياً وآمناً."
   },
   {
     "id": 7,
     "name": "شحن شدات ببجي - 8100 UC",
-    "category": "games",
+    "category": "pubg",
     "price": 0,
     "unit": "شدة",
     "inputType": "id",
     "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 8100 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+    "description": "شحن 8100 شدة ببجي موبايل رسمياً وآمناً."
   },
   {
     "id": 8,

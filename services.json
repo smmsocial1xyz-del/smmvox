@@ -1,132 +1,65 @@
 [
   {
-    "id": 1,
-    "name": "شحن شدات ببجي - 60 UC",
-    "category": "pubg",
-    "price": 0,
-    "unit": "شدة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 60 شدة ببجي موبايل رسمياً وآمناً."
+    "id": 101,
+    "category": "Instagram - إنستغرام",
+    "name": "متابعين إنستغرام [مستقر - ضمان 30 يوم]",
+    "rate": 15.00,
+    "min": 100,
+    "max": 50000,
+    "desc": "متابعين جودة ممتازة ببدء سريع جداً وضمان التعويض في حال النقصان."
   },
   {
-    "id": 2,
-    "name": "شحن شدات ببجي - 120 UC",
-    "category": "pubg",
-    "price": 0,
-    "unit": "شدة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 120 شدة ببجي موبايل رسمياً وآمناً."
+    "id": 102,
+    "category": "Instagram - إنستغرام",
+    "name": "لايكات إنستغرام [سريعة جداً]",
+    "rate": 5.00,
+    "min": 50,
+    "max": 100000,
+    "desc": "إعجابات سريعة للغاية للمنشورات والريلز."
   },
   {
-    "id": 3,
-    "name": "شحن شدات ببجي - 325 UC",
-    "category": "pubg",
-    "price": 0,
-    "unit": "شدة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 325 شدة ببجي موبايل رسمياً وآمناً."
+    "id": 201,
+    "category": "TikTok - تيك توك",
+    "name": "مشاهدات TikTok [فورية ورخيصة جداً]",
+    "rate": 1.50,
+    "min": 1000,
+    "max": 1000000,
+    "desc": "زيادة مشاهدات الفيديو فورية بآلاف المشاهدات بسرعة فائقة."
   },
   {
-    "id": 4,
-    "name": "شحن شدات ببجي - 660 UC",
-    "category": "pubg",
-    "price": 0,
-    "unit": "شدة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 660 شدة ببجي موبايل رسمياً وآمناً."
+    "id": 202,
+    "category": "TikTok - تيك توك",
+    "name": "متابعين TikTok [حسابات حقيقية]",
+    "rate": 25.00,
+    "min": 100,
+    "max": 20000,
+    "desc": "متابعين لحسابك على تيك توك لفتح البث المباشر والنمو."
   },
   {
-    "id": 5,
-    "name": "شحن شدات ببجي - 1800 UC",
-    "category": "pubg",
-    "price": 0,
-    "unit": "شدة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 1800 شدة ببجي موبايل رسمياً وآمناً."
+    "id": 301,
+    "category": "Facebook - فيسبوك",
+    "name": "لايكات + المتابعين لصفحات الفيسبوك",
+    "rate": 35.00,
+    "min": 500,
+    "max": 30000,
+    "desc": "تزويد معجبي ومتابعي الصفحات العامة Page Likes."
   },
   {
-    "id": 6,
-    "name": "شحن شدات ببجي - 3850 UC",
-    "category": "pubg",
-    "price": 0,
-    "unit": "شدة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 3850 شدة ببجي موبايل رسمياً وآمناً."
+    "id": 401,
+    "category": "YouTube - يوتيوب",
+    "name": "مشاهدات يوتيوب [آمنة ومستقرة]",
+    "rate": 45.00,
+    "min": 500,
+    "max": 100000,
+    "desc": "مشاهدات عالية الجودة تساعد في تصدر نتائج البحث."
   },
   {
-    "id": 7,
-    "name": "شحن شدات ببجي - 8100 UC",
-    "category": "pubg",
-    "price": 0,
-    "unit": "شدة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن 8100 شدة ببجي موبايل رسمياً وآمناً."
-  },
-  {
-    "id": 8,
-    "name": "شحن جواهر فري فاير",
-    "category": "freefire",
-    "price": 0,
-    "unit": "جوهرة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن جواهر لعبة فري فاير بسرعة وأمان عن طريق الـ ID."
-  },
-  {
-    "id": 9,
-    "name": "اشتراك ChatGPT Plus",
-    "category": "ai",
-    "price": 0,
-    "unit": "شهر",
-    "inputType": "email",
-    "inputPlaceholder": "أدخل البريد الإلكتروني (Email)",
-    "description": "تفعيل اشتراك شات جي بي تي بلس على إيميلك الشخصي."
-  },
-  {
-    "id": 10,
-    "name": "اشتراك Gemini Advanced",
-    "category": "ai",
-    "price": 0,
-    "unit": "شهر",
-    "inputType": "email",
-    "inputPlaceholder": "أدخل البريد الإلكتروني (Email)",
-    "description": "تفعيل اشتراك جميناي أدفانسد من جوجل."
-  },
-  {
-    "id": 11,
-    "name": "اشتراك GearUP Booster (VPN)",
-    "category": "vpn",
-    "price": 0,
-    "unit": "شهر",
-    "inputType": "email",
-    "inputPlaceholder": "أدخل البريد الإلكتروني أو حساب التطبيق",
-    "description": "تسريع البنج وتقليل اللاق في الألعاب أونلاين."
-  },
-  {
-    "id": 12,
-    "name": "خدمات سحب البيانات",
-    "category": "data",
-    "price": 0,
-    "unit": "طلب",
-    "inputType": "phone",
-    "inputPlaceholder": "أدخل رقم الهاتف أو التفاصيل المطلوبة",
-    "description": "خدمات سحب واستعلام البيانات بدقة وسرعة."
-  },
-  {
-    "id": 13,
-    "name": "خدمات السجل المدني",
-    "category": "civil",
-    "price": 0,
-    "unit": "معاملة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل الرقم القومي / بيانات المعاملة",
-    "description": "استعلامات وخدمات السجل المدني والمعاملات الحكومية."
+    "id": 501,
+    "category": "Telegram - تليجرام",
+    "name": "أعضاء قنوات ومجموعات تليجرام",
+    "rate": 12.00,
+    "min": 100,
+    "max": 50000,
+    "desc": "أعضاء سريعي الانضمام للقنوات والمجموعات."
   }
 ]

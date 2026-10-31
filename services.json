@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "اشتراك ChatGPT Plus",
+    "category": "ai",
+    "price": 0,
+    "unit": "شهر",
+    "inputType": "email",
+    "inputPlaceholder": "أدخل البريد الإلكتروني (Email)",
+    "description": "تفعيل اشتراك شات جي بي تي بلس على إيميلك الشخصي للاستفادة من أحدث نماذج الذكاء الاصطناعي وتوليد الصور بسرعة عالية."
+  },
+  {
+    "id": 2,
+    "name": "اشتراك Gemini Advanced",
+    "category": "ai",
+    "price": 0,
+    "unit": "شهر",
+    "inputType": "email",
+    "inputPlaceholder": "أدخل البريد الإلكتروني (Email)",
+    "description": "اشتراك جميناي أدفانسد لتجربة أداء الذكاء الاصطناعي المتقدم من جوجل مع مساحة تخزين سحابية."
+  },
+  {
+    "id": 3,
+    "name": "اشتراك GearUP Booster (VPN)",
+    "category": "ai",
+    "price": 0,
+    "unit": "شهر",
+    "inputType": "email",
+    "inputPlaceholder": "أدخل البريد الإلكتروني أو حساب التطبيق",
+    "description": "تسريع وتثبيت البنج تقليل اللغ في الألعاب أونلاين وتحسين الاتصال على جميع السيرفرات."
+  },
+  {
+    "id": 4,
+    "name": "شحن شدات ببجي (PUBG UC)",
+    "category": "games",
+    "price": 0,
+    "unit": "شدة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
+    "description": "شحن شدات ببجي موبايل فورياً وبطريقة آمنة ومباشرة عن طريق الـ ID الخاص بحسابك."
+  },
+  {
+    "id": 5,
+    "name": "شحن جواهر فري فاير (Free Fire)",
+    "category": "games",
+    "price": 0,
+    "unit": "جوهرة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
+    "description": "شحن جواهر لعبة فري فاير بسرعة عن طريق معرف اللاعب ID بشكل آمن 100%."
+  },
+  {
+    "id": 6,
+    "name": "شحن باقات بيانات خطوط الاتصال",
+    "category": "data",
+    "price": 0,
+    "unit": "جيجا",
+    "inputType": "phone",
+    "inputPlaceholder": "أدخل رقم الهاتف المراد شحنه",
+    "description": "تجديد وتزويد باقات الإنترنت والميجابايتس لجميع شبكات الاتصال بسرعة فورية."
+  },
+  {
+    "id": 7,
+    "name": "خدمات بيانات الخطوط الاستعلامية",
+    "category": "data",
+    "price": 0,
+    "unit": "طلب",
+    "inputType": "phone",
+    "inputPlaceholder": "أدخل رقم الهاتف للاستعلام",
+    "description": "خدمة الاستعلام عن بيانات وتفاصيل الخطوط لجميع الشبكات."
+  },
+  {
+    "id": 8,
+    "name": "خدمات الاستعلامات الحكومية والسجل المدني",
+    "category": "civil",
+    "price": 0,
+    "unit": "معاملة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل الرقم القومي / بيانات الطلب",
+    "description": "متابعة واستخراج خدمات واستعلامات السجل المدني والمعاملات بسرعة وسهولة."
+  }
+]

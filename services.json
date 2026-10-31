@@ -1,82 +1,132 @@
 [
   {
     "id": 1,
+    "name": "شحن شدات ببجي - 60 UC",
+    "category": "games",
+    "price": 0,
+    "unit": "شدة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
+    "description": "شحن 60 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+  },
+  {
+    "id": 2,
+    "name": "شحن شدات ببجي - 120 UC",
+    "category": "games",
+    "price": 0,
+    "unit": "شدة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
+    "description": "شحن 120 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+  },
+  {
+    "id": 3,
+    "name": "شحن شدات ببجي - 325 UC",
+    "category": "games",
+    "price": 0,
+    "unit": "شدة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
+    "description": "شحن 325 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+  },
+  {
+    "id": 4,
+    "name": "شحن شدات ببجي - 660 UC",
+    "category": "games",
+    "price": 0,
+    "unit": "شدة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
+    "description": "شحن 660 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+  },
+  {
+    "id": 5,
+    "name": "شحن شدات ببجي - 1800 UC",
+    "category": "games",
+    "price": 0,
+    "unit": "شدة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
+    "description": "شحن 1800 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+  },
+  {
+    "id": 6,
+    "name": "شحن شدات ببجي - 3850 UC",
+    "category": "games",
+    "price": 0,
+    "unit": "شدة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
+    "description": "شحن 3850 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+  },
+  {
+    "id": 7,
+    "name": "شحن شدات ببجي - 8100 UC",
+    "category": "games",
+    "price": 0,
+    "unit": "شدة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
+    "description": "شحن 8100 شدة ببجي موبايل رسمياً وآمناً عن طريق الـ ID."
+  },
+  {
+    "id": 8,
+    "name": "شحن جواهر فري فاير",
+    "category": "freefire",
+    "price": 0,
+    "unit": "جوهرة",
+    "inputType": "id",
+    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
+    "description": "شحن جواهر لعبة فري فاير بسرعة وأمان عن طريق الـ ID."
+  },
+  {
+    "id": 9,
     "name": "اشتراك ChatGPT Plus",
     "category": "ai",
     "price": 0,
     "unit": "شهر",
     "inputType": "email",
     "inputPlaceholder": "أدخل البريد الإلكتروني (Email)",
-    "description": "تفعيل اشتراك شات جي بي تي بلس على إيميلك الشخصي للاستفادة من أحدث نماذج الذكاء الاصطناعي وتوليد الصور بسرعة عالية."
+    "description": "تفعيل اشتراك شات جي بي تي بلس على إيميلك الشخصي."
   },
   {
-    "id": 2,
+    "id": 10,
     "name": "اشتراك Gemini Advanced",
     "category": "ai",
     "price": 0,
     "unit": "شهر",
     "inputType": "email",
     "inputPlaceholder": "أدخل البريد الإلكتروني (Email)",
-    "description": "اشتراك جميناي أدفانسد لتجربة أداء الذكاء الاصطناعي المتقدم من جوجل مع مساحة تخزين سحابية."
+    "description": "تفعيل اشتراك جميناي أدفانسد من جوجل."
   },
   {
-    "id": 3,
+    "id": 11,
     "name": "اشتراك GearUP Booster (VPN)",
-    "category": "ai",
+    "category": "vpn",
     "price": 0,
     "unit": "شهر",
     "inputType": "email",
     "inputPlaceholder": "أدخل البريد الإلكتروني أو حساب التطبيق",
-    "description": "تسريع وتثبيت البنج تقليل اللغ في الألعاب أونلاين وتحسين الاتصال على جميع السيرفرات."
+    "description": "تسريع البنج وتقليل اللاق في الألعاب أونلاين."
   },
   {
-    "id": 4,
-    "name": "شحن شدات ببجي (PUBG UC)",
-    "category": "games",
-    "price": 0,
-    "unit": "شدة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن شدات ببجي موبايل فورياً وبطريقة آمنة ومباشرة عن طريق الـ ID الخاص بحسابك."
-  },
-  {
-    "id": 5,
-    "name": "شحن جواهر فري فاير (Free Fire)",
-    "category": "games",
-    "price": 0,
-    "unit": "جوهرة",
-    "inputType": "id",
-    "inputPlaceholder": "أدخل معرف اللاعب (Player ID)",
-    "description": "شحن جواهر لعبة فري فاير بسرعة عن طريق معرف اللاعب ID بشكل آمن 100%."
-  },
-  {
-    "id": 6,
-    "name": "شحن باقات بيانات خطوط الاتصال",
-    "category": "data",
-    "price": 0,
-    "unit": "جيجا",
-    "inputType": "phone",
-    "inputPlaceholder": "أدخل رقم الهاتف المراد شحنه",
-    "description": "تجديد وتزويد باقات الإنترنت والميجابايتس لجميع شبكات الاتصال بسرعة فورية."
-  },
-  {
-    "id": 7,
-    "name": "خدمات بيانات الخطوط الاستعلامية",
+    "id": 12,
+    "name": "خدمات سحب البيانات",
     "category": "data",
     "price": 0,
     "unit": "طلب",
     "inputType": "phone",
-    "inputPlaceholder": "أدخل رقم الهاتف للاستعلام",
-    "description": "خدمة الاستعلام عن بيانات وتفاصيل الخطوط لجميع الشبكات."
+    "inputPlaceholder": "أدخل رقم الهاتف أو التفاصيل المطلوبة",
+    "description": "خدمات سحب واستعلام البيانات بدقة وسرعة."
   },
   {
-    "id": 8,
-    "name": "خدمات الاستعلامات الحكومية والسجل المدني",
+    "id": 13,
+    "name": "خدمات السجل المدني",
     "category": "civil",
     "price": 0,
     "unit": "معاملة",
     "inputType": "id",
-    "inputPlaceholder": "أدخل الرقم القومي / بيانات الطلب",
-    "description": "متابعة واستخراج خدمات واستعلامات السجل المدني والمعاملات بسرعة وسهولة."
+    "inputPlaceholder": "أدخل الرقم القومي / بيانات المعاملة",
+    "description": "استعلامات وخدمات السجل المدني والمعاملات الحكومية."
   }
 ]

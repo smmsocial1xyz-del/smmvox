@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الخدمات الرقمية الشامل</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="bg-blue-600 p-2 rounded-xl text-white shadow-md shadow-blue-500/30">
+                    <i class="fa-solid fa-bolt text-xl"></i>
+                </div>
+                <h1 class="text-xl font-bold tracking-wider text-white">متجر <span class="text-blue-500">الخدمات الرقمية</span></h1>
+            </div>
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <a href="https://wa.me/201234567890" target="_blank" class="bg-green-600/20 border border-green-500/40 text-green-400 px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-green-600 hover:text-white transition">
+                    <i class="fa-brands fa-whatsapp"></i> واتساب
+                </a>
+                <a href="https://t.me/yourusername" target="_blank" class="bg-sky-600/20 border border-sky-500/40 text-sky-400 px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-sky-600 hover:text-white transition">
+                    <i class="fa-brands fa-telegram"></i> تليجرام
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Services Section (2 Columns on Large Screens) -->
+        <div class="lg:col-span-2 space-y-6">
+            <div class="bg-gray-900 border border-gray-800 p-5 rounded-2xl shadow-xl">
+                <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-blue-400">
+                    <i class="fa-solid fa-list-check"></i> قسم الخدمات المتاحة
+                </h2>
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-2 mb-6" id="categoryFilters">
+                    <button onclick="filterCategory('all')" class="category-btn bg-blue-600 text-white px-4 py-1.5 rounded-xl text-sm font-semibold transition shadow-md">الكل</button>
+                    <button onclick="filterCategory('ai')" class="category-btn bg-gray-800 text-gray-300 px-4 py-1.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition">الذكاء الاصطناعي والـ VPN</button>
+                    <button onclick="filterCategory('games')" class="category-btn bg-gray-800 text-gray-300 px-4 py-1.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition">شحن الألعاب</button>
+                    <button onclick="filterCategory('data')" class="category-btn bg-gray-800 text-gray-300 px-4 py-1.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition">باقات وبيانات الخطوط</button>
+                    <button onclick="filterCategory('civil')" class="category-btn bg-gray-800 text-gray-300 px-4 py-1.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition">السجل المدني</button>
+                </div>
+
+                <!-- Services Grid -->
+                <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Loaded dynamically via JavaScript -->
+                    <div class="text-center py-10 text-gray-500 col-span-full">جاري تحميل الخدمات...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Form Section (1 Column) -->
+        <div class="space-y-6">
+            <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl sticky top-24">
+                <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-green-400">
+                    <i class="fa-solid fa-cart-shopping"></i> تفاصيل طلبك
+                </h2>
+
+                <form id="orderForm" onsubmit="submitOrder(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-1">الخدمة المختارة</label>
+                        <select id="serviceSelect" onchange="updateServiceDetails()" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 transition">
+                            <option value="">اختر الخدمة أولاً...</option>
+                        </select>
+                    </div>
+
+                    <div id="serviceDescriptionContainer" class="bg-gray-950/50 border border-gray-800/60 p-3 rounded-xl text-xs text-gray-400 hidden">
+                        <span class="font-bold text-gray-300 block mb-1">وصف الخدمة:</span>
+                        <p id="serviceDescriptionText"></p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-1" id="inputLabel">المدخلات المطلوبة</label>
+                        <input type="text" id="userInput" required placeholder="اختر الخدمة أولاً" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-1">الكمية / العدد</label>
+                        <input type="number" id="quantityInput" value="1" min="1" oninput="calculateTotal()" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 transition">
+                    </div>
+
+                    <div class="border-t border-gray-800 pt-4 flex justify-between items-center">
+                        <span class="text-sm font-semibold text-gray-400">السعر النهائي:</span>
+                        <span class="text-xl font-black text-green-400"><span id="totalPrice">0</span> جنيه</span>
+                    </div>
+
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-green-600/30 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> إتمام الطلب عبر واتساب
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-6 text-center text-sm text-gray-500">
+        <p>جميع الحقوق محفوظة &copy; 2026 - لوحة الخدمات الرقمية</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        let servicesData = [];
+        let whatsappNumber = "201234567890"; // ضع رقم الواتساب الخاص بك هنا (بدون علامة +)
+
+        // Fetch services from services.json
+        async function fetchServices() {
+            try {
+                const response = await fetch('services.json');
+                servicesData = await response.json();
+                renderServices(servicesData);
+                populateSelect(servicesData);
+            } catch (error) {
+                console.error("Error loading services:", error);
+                document.getElementById('servicesGrid').innerHTML = '<div class="text-center py-10 text-red-500 col-span-full">فشل تحميل الخدمات. تأكد من وجود ملف services.json بجانب الصفحة.</div>';
+            }
+        }
+
+        function renderServices(services) {
+            const grid = document.getElementById('servicesGrid');
+            grid.innerHTML = '';
+            
+            if(services.length === 0) {
+                grid.innerHTML = '<div class="text-center py-10 text-gray-500 col-span-full">لا توجد خدمات متاحة حالياً.</div>';
+                return;
+            }
+
+            services.forEach(service => {
+                grid.innerHTML += `
+                    <div class="bg-gray-950 border border-gray-800 hover:border-blue-500/50 p-4 rounded-xl flex flex-col justify-between transition shadow-md">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-bold text-white text-sm">${service.name}</h3>
+                                <span class="bg-blue-600/20 text-blue-400 text-xs px-2.5 py-1 rounded-lg font-semibold whitespace-nowrap">${service.price} جنيه</span>
+                            </div>
+                            <p class="text-xs text-gray-400 mb-4 line-clamp-2">${service.description}</p>
+                        </div>
+                        <button onclick="selectService(${service.id})" class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 font-semibold py-1.5 rounded-lg text-xs transition">
+                            اطلب الآن
+                        </button>
+                    </div>
+                `;
+            });
+        }
+
+        function populateSelect(services) {
+            const select = document.getElementById('serviceSelect');
+            select.innerHTML = '<option value="">اختر الخدمة...</option>';
+            services.forEach(service => {
+                select.innerHTML += `<option value="${service.id}">${service.name} (${service.price} ج.م)</option>`;
+            });
+        }
+
+        function filterCategory(category) {
+            // Update button styles
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
+                btn.classList.add('bg-gray-800', 'text-gray-300');
+            });
+            event.target.classList.remove('bg-gray-800', 'text-gray-300');
+            event.target.classList.add('bg-blue-600', 'text-white', 'shadow-md');
+
+            if(category === 'all') {
+                renderServices(servicesData);
+            } else {
+                const filtered = servicesData.filter(s => s.category === category);
+                renderServices(filtered);
+            }
+        }
+
+        function selectService(id) {
+            const select = document.getElementById('serviceSelect');
+            select.value = id;
+            updateServiceDetails();
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        function updateServiceDetails() {
+            const serviceId = document.getElementById('serviceSelect').value;
+            const userInput = document.getElementById('userInput');
+            const inputLabel = document.getElementById('inputLabel');
+            const descContainer = document.getElementById('serviceDescriptionContainer');
+            const descText = document.getElementById('serviceDescriptionText');
+
+            if (!serviceId) {
+                userInput.placeholder = "اختر الخدمة أولاً";
+                inputLabel.innerText = "المدخلات المطلوبة";
+                descContainer.classList.add('hidden');
+                document.getElementById('totalPrice').innerText = '0';
+                return;
+            }
+
+            const service = servicesData.find(s => s.id == serviceId);
+            if (service) {
+                userInput.placeholder = service.inputPlaceholder;
+                inputLabel.innerText = service.inputPlaceholder;
+                
+                if (service.description) {
+                    descText.innerText = service.description;
+                    descContainer.classList.remove('hidden');
+                } else {
+                    descContainer.classList.add('hidden');
+                }
+
+                calculateTotal();
+            }
+        }
+
+        function calculateTotal() {
+            const serviceId = document.getElementById('serviceSelect').value;
+            const quantity = document.getElementById('quantityInput').value || 1;
+            
+            if (!serviceId) {
+                document.getElementById('totalPrice').innerText = '0';
+                return;
+            }
+
+            const service = servicesData.find(s => s.id == serviceId);
+            if (service) {
+                const total = service.price * quantity;
+                document.getElementById('totalPrice').innerText = total;
+            }
+        }
+
+        function submitOrder(event) {
+            event.preventDefault();
+            const serviceId = document.getElementById('serviceSelect').value;
+            const userInput = document.getElementById('userInput').value;
+            const quantity = document.getElementById('quantityInput').value;
+
+            if (!serviceId) {
+                alert("الرجاء اختيار الخدمة المطلوبة");
+                return;
+            }
+
+            const service = servicesData.find(s => s.id == serviceId);
+            const total = service.price * quantity;
+
+            let message = `مرحباً، أريد طلب الخدمة التالية:%0A` +
+                          `----------------------------------%0A` +
+                          `📌 الخدمة: ${service.name}%0A` +
+                          `📝 المدخلات (البريد/ID/الرقم): ${userInput}%0A` +
+                          `🔢 الكمية: ${quantity} ${service.unit}%0A` +
+                          `💰 السعر الإجمالي: ${total} جنيه%0A` +
+                          `----------------------------------`;
+
+            window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+        }
+
+        // Initialize on load
+        window.onload = fetchServices;
+    </script>
+</body>
+</html>

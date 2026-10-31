@@ -10,6 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Cairo', sans-serif; }
+        .category-card:hover { transform: translateY(-3px); }
+        @keyframes pulse-glow {
+            0%, 100% { border-color: rgba(59, 130, 246, 0.5); box-shadow: 0 0 15px rgba(59, 130, 246, 0.2); }
+            50% { border-color: rgba(16, 185, 129, 0.8); box-shadow: 0 0 25px rgba(16, 185, 129, 0.4); }
+        }
+        .glowing-box { animation: pulse-glow 3s infinite; }
     </style>
 </head>
 <body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col justify-between">
@@ -18,14 +24,14 @@
     <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="bg-blue-600 p-2 rounded-xl text-white shadow-md shadow-blue-500/30">
-                    <i class="fa-solid fa-fox text-xl"></i>
+                <div class="bg-blue-600 p-2.5 rounded-xl text-white shadow-md shadow-blue-500/30">
+                    <i class="fa-solid fa-bolt text-xl"></i>
                 </div>
                 <h1 class="text-xl font-bold tracking-wider text-white">متجر <span class="text-blue-500">فوكس</span></h1>
             </div>
             <div class="flex items-center space-x-3 space-x-reverse">
                 <a href="https://wa.me/201093285651" target="_blank" class="bg-green-600/20 border border-green-500/40 text-green-400 px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-green-600 hover:text-white transition">
-                    <i class="fa-brands fa-whatsapp"></i> واتساب
+                    <i class="fa-brands fa-whatsapp"></i> واتساب الدعم
                 </a>
                 <a href="https://t.me/yourusername" target="_blank" class="bg-sky-600/20 border border-sky-500/40 text-sky-400 px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-sky-600 hover:text-white transition">
                     <i class="fa-brands fa-telegram"></i> تليجرام
@@ -37,23 +43,41 @@
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 py-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        <!-- Services Section -->
+        <!-- Services Categories & Grid Section -->
         <div class="lg:col-span-2 space-y-6">
-            <div class="bg-gray-900 border border-gray-800 p-5 rounded-2xl shadow-xl">
+            <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl">
                 <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-blue-400">
-                    <i class="fa-solid fa-list-check"></i> قسم الخدمات المتاحة والشحن
+                    <i class="fa-solid fa-layer-group"></i> اختر الفئة المطلوبة
                 </h2>
                 
-                <!-- Category Filters -->
-                <div class="flex flex-wrap gap-2 mb-6" id="categoryFilters">
-                    <button onclick="filterCategory('all')" class="category-btn bg-blue-600 text-white px-3.5 py-1.5 rounded-xl text-xs font-semibold transition shadow-md">الكل</button>
-                    <button onclick="filterCategory('games')" class="category-btn bg-gray-800 text-gray-300 px-3.5 py-1.5 rounded-xl text-xs font-semibold hover:bg-gray-700 transition">شدات ببجي</button>
-                    <button onclick="filterCategory('freefire')" class="category-btn bg-gray-800 text-gray-300 px-3.5 py-1.5 rounded-xl text-xs font-semibold hover:bg-gray-700 transition">فري فاير</button>
-                    <button onclick="filterCategory('ai')" class="category-btn bg-gray-800 text-gray-300 px-3.5 py-1.5 rounded-xl text-xs font-semibold hover:bg-gray-700 transition">ذكاء اصطناعي</button>
-                    <button onclick="filterCategory('vpn')" class="category-btn bg-gray-800 text-gray-300 px-3.5 py-1.5 rounded-xl text-xs font-semibold hover:bg-gray-700 transition">جير أب في بي إن</button>
-                    <button onclick="filterCategory('data')" class="category-btn bg-gray-800 text-gray-300 px-3.5 py-1.5 rounded-xl text-xs font-semibold hover:bg-gray-700 transition">سحب البيانات</button>
-                    <button onclick="filterCategory('civil')" class="category-btn bg-gray-800 text-gray-300 px-3.5 py-1.5 rounded-xl text-xs font-semibold hover:bg-gray-700 transition">السجل المدني</button>
+                <!-- Categories Grid with Icons/Images -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-8" id="categoryCardsContainer">
+                    <button onclick="filterCategory('all')" class="category-card bg-blue-600 text-white p-3.5 rounded-xl text-center font-bold text-xs transition shadow-md flex flex-col items-center gap-2 border border-blue-500">
+                        <i class="fa-solid fa-store text-xl"></i> الكل
+                    </button>
+                    <button onclick="filterCategory('games')" class="category-card bg-gray-950 hover:bg-gray-800 text-gray-300 p-3.5 rounded-xl text-center font-bold text-xs transition shadow-md flex flex-col items-center gap-2 border border-gray-800">
+                        <i class="fa-solid fa-gamepad text-xl text-yellow-500"></i> شدات ببجي
+                    </button>
+                    <button onclick="filterCategory('freefire')" class="category-card bg-gray-950 hover:bg-gray-800 text-gray-300 p-3.5 rounded-xl text-center font-bold text-xs transition shadow-md flex flex-col items-center gap-2 border border-gray-800">
+                        <i class="fa-solid fa-fire text-xl text-orange-500"></i> فري فاير
+                    </button>
+                    <button onclick="filterCategory('ai')" class="category-card bg-gray-950 hover:bg-gray-800 text-gray-300 p-3.5 rounded-xl text-center font-bold text-xs transition shadow-md flex flex-col items-center gap-2 border border-gray-800">
+                        <i class="fa-solid fa-robot text-xl text-purple-400"></i> ذكاء اصطناعي
+                    </button>
+                    <button onclick="filterCategory('vpn')" class="category-card bg-gray-950 hover:bg-gray-800 text-gray-300 p-3.5 rounded-xl text-center font-bold text-xs transition shadow-md flex flex-col items-center gap-2 border border-gray-800">
+                        <i class="fa-solid fa-shield-halved text-xl text-green-400"></i> جير أب في بي إن
+                    </button>
+                    <button onclick="filterCategory('data')" class="category-card bg-gray-950 hover:bg-gray-800 text-gray-300 p-3.5 rounded-xl text-center font-bold text-xs transition shadow-md flex flex-col items-center gap-2 border border-gray-800">
+                        <i class="fa-solid fa-database text-xl text-sky-400"></i> سحب البيانات
+                    </button>
+                    <button onclick="filterCategory('civil')" class="category-card bg-gray-950 hover:bg-gray-800 text-gray-300 p-3.5 rounded-xl text-center font-bold text-xs transition shadow-md flex flex-col items-center gap-2 border border-gray-800">
+                        <i class="fa-solid fa-id-card text-xl text-red-400"></i> السجل المدني
+                    </button>
                 </div>
+
+                <h3 class="text-md font-bold mb-3 flex items-center gap-2 text-gray-300 border-t border-gray-800 pt-4">
+                    <i class="fa-solid fa-list"></i> قائمة الخدمات المتاحة
+                </h3>
 
                 <!-- Services Grid -->
                 <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -62,11 +86,11 @@
             </div>
         </div>
 
-        <!-- Order Form Section -->
+        <!-- Order Form & Glowing Invoice Section -->
         <div class="space-y-6">
-            <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl sticky top-24">
+            <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl sticky top-24 glowing-box">
                 <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-green-400">
-                    <i class="fa-solid fa-cart-shopping"></i> تفاصيل طلبك
+                    <i class="fa-solid fa-file-invoice-dollar"></i> فاتورة الطلب الفورية
                 </h2>
 
                 <form id="orderForm" onsubmit="submitOrder(event)" class="space-y-4">
@@ -77,8 +101,9 @@
                         </select>
                     </div>
 
-                    <div id="serviceDescriptionContainer" class="bg-gray-950/50 border border-gray-800/60 p-3 rounded-xl text-xs text-gray-400 hidden">
-                        <span class="font-bold text-gray-300 block mb-1">وصف الخدمة:</span>
+                    <!-- Glowing Description Box -->
+                    <div id="serviceDescriptionContainer" class="bg-gray-950/80 border border-blue-500/40 p-3.5 rounded-xl text-xs text-gray-300 hidden shadow-inner">
+                        <span class="font-bold text-blue-400 block mb-1"><i class="fa-solid fa-circle-info"></i> وصف الخدمة:</span>
                         <p id="serviceDescriptionText"></p>
                     </div>
 
@@ -92,13 +117,19 @@
                         <input type="number" id="quantityInput" value="1" min="1" oninput="calculateTotal()" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-blue-500 transition">
                     </div>
 
-                    <div class="border-t border-gray-800 pt-4 flex justify-between items-center">
-                        <span class="text-sm font-semibold text-gray-400">السعر النهائي:</span>
-                        <span class="text-xl font-black text-green-400"><span id="totalPrice">0</span> جنيه</span>
+                    <div class="border-t border-gray-800 pt-4 bg-gray-950/40 p-3 rounded-xl">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-xs text-gray-400">رقم التحويل الرسمي:</span>
+                            <span class="text-xs font-mono text-yellow-400 font-bold">01093285651</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-semibold text-gray-300">السعر الإجمالي:</span>
+                            <span class="text-xl font-black text-green-400"><span id="totalPrice">0</span> جنيه</span>
+                        </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-green-600/30 flex items-center justify-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> إتمام الطلب عبر واتساب
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-green-600/30 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> إتمام الطلب والتحويل للواتساب
                     </button>
                 </form>
             </div>
@@ -133,7 +164,7 @@
             grid.innerHTML = '';
             
             if(services.length === 0) {
-                grid.innerHTML = '<div class="text-center py-10 text-gray-500 col-span-full">لا توجد خدمات متاحة حالياً.</div>';
+                grid.innerHTML = '<div class="text-center py-10 text-gray-500 col-span-full">لا توجد خدمات متاحة في هذه الفئة حالياً.</div>';
                 return;
             }
 
@@ -148,7 +179,7 @@
                             <p class="text-xs text-gray-400 mb-4 line-clamp-2">${service.description}</p>
                         </div>
                         <button onclick="selectService(${service.id})" class="w-full bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 font-semibold py-1.5 rounded-lg text-xs transition">
-                            اطلب الآن
+                            اختر و اطلب
                         </button>
                     </div>
                 `;
@@ -157,19 +188,20 @@
 
         function populateSelect(services) {
             const select = document.getElementById('serviceSelect');
-            select.innerHTML = '<option value="">اختر الخدمة...</option>';
+            select.innerHTML = '<option value="">اختر الخدمة من القائمة...</option>';
             services.forEach(service => {
                 select.innerHTML += `<option value="${service.id}">${service.name} (${service.price} ج.م)</option>`;
             });
         }
 
         function filterCategory(category) {
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
-                btn.classList.add('bg-gray-800', 'text-gray-300');
+            // Update button styles
+            document.querySelectorAll('.category-card').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white', 'border-blue-500', 'shadow-md');
+                btn.classList.add('bg-gray-950', 'text-gray-300', 'border-gray-800');
             });
-            event.target.classList.remove('bg-gray-800', 'text-gray-300');
-            event.target.classList.add('bg-blue-600', 'text-white', 'shadow-md');
+            event.currentTarget.classList.remove('bg-gray-950', 'text-gray-300', 'border-gray-800');
+            event.currentTarget.classList.add('bg-blue-600', 'text-white', 'border-blue-500', 'shadow-md');
 
             if(category === 'all') {
                 renderServices(servicesData);
@@ -240,20 +272,21 @@
             const quantity = document.getElementById('quantityInput').value;
 
             if (!serviceId) {
-                alert("الرجاء اختيار الخدمة المطلوبة");
+                alert("الرجاء اختيار الخدمة المطلوبة أولاً");
                 return;
             }
 
             const service = servicesData.find(s => s.id == serviceId);
             const total = service.price * quantity;
 
-            let message = `مرحباً، أريد طلب الخدمة التالية من متجر فوكس:%0A` +
+            let message = `🚀 *طلب جديد من متجر فوكس*%0A` +
                           `----------------------------------%0A` +
                           `📌 الخدمة: ${service.name}%0A` +
                           `📝 المدخلات (ID / البيانات): ${userInput}%0A` +
                           `🔢 الكمية: ${quantity} ${service.unit}%0A` +
-                          `💰 السعر الإجمالي: ${total} جنيه%0A` +
-                          `----------------------------------`;
+                          `💰 السعر الإجمالي المطلوب: ${total} جنيه%0A` +
+                          `----------------------------------%0A` +
+                          `💳 يرجى التحويل على الرقم الرسمي: *01093285651* وإرسال إيصال الدفع هنا للبدء الفوري!`;
 
             window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
         }
